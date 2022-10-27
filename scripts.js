@@ -35,12 +35,20 @@ function add_to_library() {
     book_pages.textContent=book.pages;
     book_item.append(book_pages);
 
-    let book_read = document.createElement('div');
+    let pages_label = document.createElement('div');
+    pages_label.setAttribute('class','pages-label');
+    pages_label.textContent='pages';
+    book_item.append(pages_label);
+
+    let book_read = document.createElement('button');
     book_read.setAttribute('class','book-read');
     book_read.textContent=book.read ? 'read' : 'not read';
     book_item.append(book_read);
 
-    console.log('click');
+    let remove_book = document.createElement('button');
+    remove_book.setAttribute('class','remove-book');
+    remove_book.textContent='Remove';
+    book_item.append(remove_book)
 
 };
 
