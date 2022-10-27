@@ -90,6 +90,14 @@ body {
     border-radius: 15px;
 }
 
+.book-remove:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.book-remove:active {
+    background-color: rgb(210, 210, 210);
+}
+
 .footer {
     display: flex;
     justify-content: center;
