@@ -42,11 +42,11 @@ function add_to_library() {
 
     let book_read = document.createElement('button');
     book_read.setAttribute('class','book-read');
-    book_read.textContent=book.read ? 'read' : 'not read';
+    book_read.textContent=book.read ? 'Read ✅' : 'Not Read ❌';
     book_item.append(book_read);
 
     let remove_book = document.createElement('button');
-    remove_book.setAttribute('class','remove-book');
+    remove_book.setAttribute('class','book-remove');
     remove_book.textContent='Remove';
     book_item.append(remove_book)
 
