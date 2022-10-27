@@ -67,3 +67,11 @@ body {
     border: 4px solid black;
     background-color: white;
 }
+
+.add:hover {
+    background-color: #FFBF00;
+}
+
+.add:active {
+    background-color: #dba502;
+}
