@@ -203,6 +203,8 @@ input#title , input#author , input#pages {
     border-radius: 15px;
     border: none;
     background-color: whitesmoke;
+    position: absolute;
+    bottom: 5px;
 }
 
 .book-read:hover {
