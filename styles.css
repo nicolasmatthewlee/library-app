@@ -115,10 +115,39 @@ input#title , input#author , input#pages {
     padding-top: 30px;
     box-sizing: border-box;
     align-items: center;
+    position: relative;
 }
 
 .book:last-of-type {
     margin-bottom: 100px;
+}
+
+.book-remove {
+    background-color: whitesmoke;
+    width: 30px;
+    height: 30px;
+    border-radius: 0px 20px 0px 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.book-remove-icon {
+    height: 20px;
+    width: 20px;
+    fill: red;
+}
+
+.book-remove:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.book-remove:active {
+    background-color: rgb(210, 210, 210);
 }
 
 .book-title {
@@ -158,21 +187,6 @@ input#title , input#author , input#pages {
 }
 
 .book-read:active {
-    background-color: rgb(210, 210, 210);
-}
-
-.book-remove {
-    background-color: whitesmoke;
-    width: 150px;
-    height: 40px;
-    border-radius: 15px;
-}
-
-.book-remove:hover {
-    background-color: rgb(230, 230, 230);
-}
-
-.book-remove:active {
     background-color: rgb(210, 210, 210);
 }
 

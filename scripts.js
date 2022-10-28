@@ -40,12 +40,16 @@ function display_library() {
 
         let remove_book = document.createElement('button');
         remove_book.setAttribute('class','book-remove');
-        remove_book.textContent='Remove';
         remove_book.addEventListener('click',() => {
             my_library.splice(book_item.dataset.index,1);
             display_library();
         });
         book_item.append(remove_book);
+
+        let remove_icon = document.createElement('img');
+        remove_icon.setAttribute('src','/assets/close.svg');
+        remove_icon.setAttribute('class','book-remove-icon');
+        remove_book.appendChild(remove_icon);
 
         let book_title = document.createElement('div');
         book_title.setAttribute('class','book-title');
