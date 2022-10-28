@@ -19,9 +19,9 @@
         <div id="add-book-modal">
             <form class="add-book-form">
                 <div class="add-book-form-title">Add New Book</div>
-                <input type="text" id="title" name="title" class='title-input' placeholder="Title" required>
-                <input type="author" id="author" name="author" class='author-input'  placeholder="Author" required>
-                <input type="pages" id="pages" name="pages" class='pages-input' placeholder="Pages" required> 
+                <input type="text" id="title" name="title" class='title-input' placeholder="Title" maxlength="400" required>
+                <input type="text" id="author" name="author" class='author-input'  placeholder="Author" maxlength="400" required>
+                <input type="number" id="pages" name="pages" class='pages-input' placeholder="Pages" max="99999" required> 
                 <div class="read-form">
                     <label for="read" class="read-label">Have you read it?</label>  
                     <input type="checkbox" id="read" name="read" class='read-input' >
