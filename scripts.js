@@ -4,14 +4,12 @@ let my_library = [];
 let default_book = new Book('The Sun Also Rises','Ernest Hemingway',280,false);
 let default_book2 = new Book('Lord of the Flies','William Golding',224,false);
 let default_book3 = new Book('The Great Gatsby','F. Scott Fitzgerald',208);
-let default_book4 = new Book("Oh, the Places You'll Go!",'Dr. Seuss',64,false);
-let default_book5 = new Book('this is going to be a really long title this is going to be a really long title this is going to be a really long titlethis is going to be a really long title this is going to be a really long titlethis is going to be a really long title','AUTHOR AUTHOR AUTHORS is going to be a really long titlethis is going to be a really long titlethis is going to be a really long titlethis is going to be a really long titlethis is going to be a really long titlethis is going to be a really long title',9999,true);
+let default_book4 = new Book("Goodnight Moon",'Margaret Wise Brown',32,false);
 
 my_library.push(default_book);
 my_library.push(default_book2);
 my_library.push(default_book3);
 my_library.push(default_book4);
-my_library.push(default_book5);
 
 function Book(title,author,pages,read) {
     this.title=title,
@@ -62,18 +60,6 @@ function display_library() {
         book_author.setAttribute('class','book-author');
         book_author.textContent=book.author;
         book_item.appendChild(book_author);
-
-        /*
-        let book_pages = document.createElement('div');
-        book_pages.setAttribute('class','book-pages');
-        book_pages.textContent=book.pages;
-        book_item.append(book_pages);
-
-        let pages_label = document.createElement('div');
-        pages_label.setAttribute('class','pages-label');
-        pages_label.textContent='pages';
-        book_item.append(pages_label);
-        */
 
         let book_read = document.createElement('button');
         book_read.setAttribute('class','book-read');
