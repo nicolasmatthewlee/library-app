@@ -5,11 +5,13 @@ let default_book = new Book('The Sun Also Rises','Ernest Hemingway',280,false);
 let default_book2 = new Book('Lord of the Flies','William Golding',224,false);
 let default_book3 = new Book('The Great Gatsby','F. Scott Fitzgerald',208);
 let default_book4 = new Book("Oh, the Places You'll Go!",'Dr. Seuss',64,false);
+let default_book5 = new Book('this is going to be a really long title this is going to be a really long title this is going to be a really long titlethis is going to be a really long title this is going to be a really long titlethis is going to be a really long title','AUTHOR AUTHOR AUTHORS is going to be a really long titlethis is going to be a really long titlethis is going to be a really long titlethis is going to be a really long titlethis is going to be a really long titlethis is going to be a really long title',9999,true);
 
 my_library.push(default_book);
 my_library.push(default_book2);
 my_library.push(default_book3);
 my_library.push(default_book4);
+my_library.push(default_book5);
 
 function Book(title,author,pages,read) {
     this.title=title,
