@@ -1,5 +1,14 @@
 let my_library = [];
 
+let book1 = new Book('1','author',80,false);
+let book2 = new Book('2','author',99,true);
+let book3 = new Book('3','author',99,true);
+let book4 = new Book('4','author',99,true);
+my_library.push(book1);
+my_library.push(book2);
+my_library.push(book3);
+my_library.push(book4);
+
 function Book(title,author,pages,read) {
     this.title=title,
     this.author=author,
@@ -52,13 +61,18 @@ function display_library() {
         let book_read = document.createElement('button');
         book_read.setAttribute('class','book-read');
         book_read.textContent=book.read ? 'Read ✅' : 'Not Read ❌';
+        book_read.addEventListener('click',() => {
+            book.read=!book.read;
+            display_library();
+        });
         book_item.append(book_read);
 
         let remove_book = document.createElement('button');
         remove_book.setAttribute('class','book-remove');
         remove_book.textContent='Remove';
         remove_book.addEventListener('click',() => {
-            my_library.splice(book_item.i,1);
+            console.log(book_item.dataset.index);
+            my_library.splice(book_item.dataset.index,1);
             display_library();
         });
         book_item.append(remove_book);

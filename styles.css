@@ -76,11 +76,21 @@ body {
 
 .book-read {
     background-color: whitesmoke;
-    width: 150px;
-    height: 40px;
+    width: 90px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 15px;
     border: none;
     background-color: whitesmoke;
+}
+
+.book-read:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.book-read:active {
+    background-color: rgb(210, 210, 210);
 }
 
 .book-remove {
