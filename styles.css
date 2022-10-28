@@ -78,7 +78,7 @@ input#title , input#author , input#pages {
     box-shadow: 0px 2px 2px lightgray;
 }
 
-form>button {
+.add-new-book {
     width: 150px;
     height: 45px;
     font-size: 20px;
@@ -192,10 +192,10 @@ form>button {
     box-shadow: 0px 5px 10px lightgray;
 }
 
-.add:hover , form>button:hover {
+.add:hover , .add-new-book:hover {
     background-color: rgb(230, 230, 230);
 }
 
-.add:active , form>button:active {
+.add:active , .add-new-book:active {
     background-color: rgb(210, 210, 210);
 }

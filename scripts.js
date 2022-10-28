@@ -1,14 +1,5 @@
 let my_library = [];
 
-let book1 = new Book('1','author',80,false);
-let book2 = new Book('2','author',99,true);
-let book3 = new Book('3','author',99,true);
-let book4 = new Book('4','author',99,true);
-my_library.push(book1);
-my_library.push(book2);
-my_library.push(book3);
-my_library.push(book4);
-
 function Book(title,author,pages,read) {
     this.title=title,
     this.author=author,
@@ -69,7 +60,6 @@ function display_library() {
         remove_book.setAttribute('class','book-remove');
         remove_book.textContent='Remove';
         remove_book.addEventListener('click',() => {
-            console.log(book_item.dataset.index);
             my_library.splice(book_item.dataset.index,1);
             display_library();
         });
@@ -79,10 +69,10 @@ function display_library() {
 
 };
 
-function add_to_library() {
+function add_to_library(title,author,pages,read) {
 
     // create new book object and add to my_library
-    let book = new Book('The Cat in the Hat','Dr. Seuss',61,true);
+    let book = new Book(title,author,pages,read);
     my_library.push(book);
 
     // display
@@ -92,14 +82,24 @@ function add_to_library() {
 
 let add_modal = document.querySelector('#add-book-modal');
 
-let add_new_book = document.querySelector('.add-new-book');
-add_new_book.addEventListener('click',() => {
+
+let form = document.querySelector('form');
+form.addEventListener('submit',(event) => {
+
+    // prevent refresh
+    event.preventDefault();
+
     add_modal.classList.toggle('active');
-    add_to_library();
+
+    let title=document.querySelector('.title-input').value;
+    let author=document.querySelector('.author-input').value;
+    let pages=document.querySelector('.pages-input').value;
+    let read=document.querySelector('.read-input').checked;
+
+    add_to_library(title,author,pages,read);
 });
 
 let add_button = document.querySelector('.add');
 add_button.addEventListener('click',() => {
     add_modal.classList.toggle('active');
-    console.log('pressed')
 });
