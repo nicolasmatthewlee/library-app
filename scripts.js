@@ -108,6 +108,7 @@ form.addEventListener('submit',(event) => {
     event.preventDefault();
 
     add_modal.classList.toggle('active');
+    overlay.classList.toggle('active');
 
     let title=document.querySelector('.title-input').value;
     let author=document.querySelector('.author-input').value;
@@ -118,9 +119,16 @@ form.addEventListener('submit',(event) => {
     form.reset();
 });
 
+let overlay = document.querySelector('.overlay');
+overlay.addEventListener('click',() => {
+    add_modal.classList.toggle('active');
+    overlay.classList.toggle('active');
+})
+
 let add_button = document.querySelector('.add');
 add_button.addEventListener('click',() => {
     add_modal.classList.toggle('active');
+    overlay.classList.toggle('active');
 });
 
 // initial display
