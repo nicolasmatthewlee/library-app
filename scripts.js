@@ -47,7 +47,7 @@ function display_library() {
         book_item.append(remove_book);
 
         let remove_icon = document.createElement('img');
-        remove_icon.setAttribute('src','/assets/close.svg');
+        remove_icon.setAttribute('src','assets/close.svg');
         remove_icon.setAttribute('class','book-remove-icon');
         remove_book.appendChild(remove_icon);
 
