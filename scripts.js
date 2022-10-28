@@ -1,5 +1,16 @@
 let my_library = [];
 
+// populate default library
+let default_book = new Book('The Sun Also Rises','Ernest Hemingway',280,false);
+let default_book2 = new Book('Lord of the Flies','William Golding',224,false);
+let default_book3 = new Book('The Great Gatsby','F. Scott Fitzgerald',208);
+let default_book4 = new Book("Oh, the Places You'll Go!",'Dr. Seuss',64,false);
+
+my_library.push(default_book);
+my_library.push(default_book2);
+my_library.push(default_book3);
+my_library.push(default_book4);
+
 function Book(title,author,pages,read) {
     this.title=title,
     this.author=author,
@@ -27,6 +38,15 @@ function display_library() {
         book_item.setAttribute('data-index',i);
         library_grid.appendChild(book_item);
 
+        let remove_book = document.createElement('button');
+        remove_book.setAttribute('class','book-remove');
+        remove_book.textContent='Remove';
+        remove_book.addEventListener('click',() => {
+            my_library.splice(book_item.dataset.index,1);
+            display_library();
+        });
+        book_item.append(remove_book);
+
         let book_title = document.createElement('div');
         book_title.setAttribute('class','book-title');
         book_title.textContent=book.title;
@@ -37,6 +57,7 @@ function display_library() {
         book_author.textContent=book.author;
         book_item.appendChild(book_author);
 
+        /*
         let book_pages = document.createElement('div');
         book_pages.setAttribute('class','book-pages');
         book_pages.textContent=book.pages;
@@ -46,6 +67,7 @@ function display_library() {
         pages_label.setAttribute('class','pages-label');
         pages_label.textContent='pages';
         book_item.append(pages_label);
+        */
 
         let book_read = document.createElement('button');
         book_read.setAttribute('class','book-read');
@@ -55,15 +77,6 @@ function display_library() {
             display_library();
         });
         book_item.append(book_read);
-
-        let remove_book = document.createElement('button');
-        remove_book.setAttribute('class','book-remove');
-        remove_book.textContent='Remove';
-        remove_book.addEventListener('click',() => {
-            my_library.splice(book_item.dataset.index,1);
-            display_library();
-        });
-        book_item.append(remove_book);
 
     }
 
@@ -103,3 +116,6 @@ let add_button = document.querySelector('.add');
 add_button.addEventListener('click',() => {
     add_modal.classList.toggle('active');
 });
+
+// initial display
+display_library();
