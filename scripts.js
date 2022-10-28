@@ -82,7 +82,6 @@ function add_to_library(title,author,pages,read) {
 
 let add_modal = document.querySelector('#add-book-modal');
 
-
 let form = document.querySelector('form');
 form.addEventListener('submit',(event) => {
 
@@ -97,6 +96,7 @@ form.addEventListener('submit',(event) => {
     let read=document.querySelector('.read-input').checked;
 
     add_to_library(title,author,pages,read);
+    form.reset();
 });
 
 let add_button = document.querySelector('.add');
