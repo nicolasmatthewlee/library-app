@@ -41,6 +41,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0px 5px 10px lightgray;
+    z-index: 1;
 }
 
 .add-book-form-title {
