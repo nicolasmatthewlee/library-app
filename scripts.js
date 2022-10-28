@@ -20,8 +20,6 @@ let library_grid = document.querySelector('.library-grid-container');
 
 function display_library() {
 
-    console.log(my_library);
-
     // clear grid
     while (library_grid.lastChild) {
         library_grid.lastChild.remove();
@@ -92,5 +90,16 @@ function add_to_library() {
 
 };
 
+let add_modal = document.querySelector('#add-book-modal');
+
+let add_new_book = document.querySelector('.add-new-book');
+add_new_book.addEventListener('click',() => {
+    add_modal.classList.toggle('active');
+    add_to_library();
+});
+
 let add_button = document.querySelector('.add');
-add_button.addEventListener('click',add_to_library);
+add_button.addEventListener('click',() => {
+    add_modal.classList.toggle('active');
+    console.log('pressed')
+});
